@@ -3,6 +3,7 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 const app = express();
 const connectDB = require("./src/config/db");
+const scheduleJob = require("./src/cron");
 // configuring .env file
 dotenv.config({ path: ".env" });
 
@@ -15,6 +16,9 @@ app.use(express.json())
 
 // importing port from.env
 const PORT = process.env.PORT;
+
+// scheduling cron jobs
+// scheduleJob.robotIncomeSponsers();
 
 // health check api
 app.get("/", (req, res) => {

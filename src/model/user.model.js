@@ -8,12 +8,12 @@ const userSchema = new Schema(
     password: { type: String, required: true },
     isDeleted: { type: Boolean, default: false },
     memberId: { type: String },
-    role: { type: String, enum: ["admin", "user"] , default:"user"},
-    balance : {type : Number, default:0},
-    isUpgraded : {type: Boolean, default: false},
-    partOfMatrix : {type: Boolean, default:false},
-    matrixNumber:{type: Number}
-
+    role: { type: String, enum: ["admin", "user"], default: "user" },
+    balance: { type: Number, default: 0 },
+    isUpgraded: { type: Boolean, default: false },
+    partOfMatrix: { type: Boolean, default: false },
+    matrixNumber: { type: Number },
+    robotIncome: { type: Number, default: 0 },
   },
   { timestamps: true }
 );
